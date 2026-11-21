@@ -1,0 +1,60 @@
+// Visual + terrain presets for each operational theater.
+// terrain.kind drives the height function in Terrain.js.
+export const THEATERS = {
+  sea: {
+    name: 'Open Ocean', base: 'carrier',
+    sun: { elevation: 28, azimuth: 160 }, turbidity: 3, rayleigh: 1.2, cloudCoverage: 0.45,
+    fog: 0xbcd3e6, fogDensity: 0.000035, exposure: 0.55,
+    water: 0x0a3a52, terrain: { kind: 'islands', scale: 1, height: 420 },
+    palette: { beach: 0xd8c79a, low: 0x4d7a35, mid: 0x3d5f2c, high: 0x7a7468, peak: 0x9b968c },
+    trees: { type: 'palm', density: 0.5 }, clouds: 70,
+  },
+  coast: {
+    name: 'Coastal Front', base: 'carrier',
+    sun: { elevation: 22, azimuth: 120 }, turbidity: 4, rayleigh: 1.5, cloudCoverage: 0.5,
+    fog: 0xc6d4dd, fogDensity: 0.00004, exposure: 0.5,
+    water: 0x0b3b4a, terrain: { kind: 'coast', scale: 1, height: 650 },
+    palette: { beach: 0xcfbf90, low: 0x5b7f3b, mid: 0x47652e, high: 0x6f6a5e, peak: 0xbdbab2 },
+    trees: { type: 'pine', density: 0.8 }, clouds: 80,
+  },
+  jungle: {
+    name: 'Jungle Highlands', base: 'airbase',
+    sun: { elevation: 35, azimuth: 200 }, turbidity: 8, rayleigh: 2.2, cloudCoverage: 0.6,
+    fog: 0xaebfa8, fogDensity: 0.00006, exposure: 0.5,
+    water: 0x2c4a32, terrain: { kind: 'hills', scale: 1, height: 700, baseHeight: 30 },
+    palette: { beach: 0x7c6a45, low: 0x2f5a1f, mid: 0x244b18, high: 0x3a5a28, peak: 0x5e6b4a },
+    trees: { type: 'jungle', density: 2.2 }, clouds: 110,
+  },
+  mountains: {
+    name: 'Thunder Mountains', base: 'airbase',
+    sun: { elevation: 18, azimuth: 230 }, turbidity: 2.5, rayleigh: 1.0, cloudCoverage: 0.35,
+    fog: 0xc0cad6, fogDensity: 0.000028, exposure: 0.55,
+    water: 0x1d3d52, terrain: { kind: 'alpine', scale: 1, height: 2600, baseHeight: 80 },
+    palette: { beach: 0x6e7b52, low: 0x48663a, mid: 0x5d6150, high: 0x6f6a64, peak: 0xf2f5f8 },
+    trees: { type: 'pine', density: 1.2 }, clouds: 90,
+  },
+  desert: {
+    name: 'Red Sand Desert', base: 'airbase',
+    sun: { elevation: 45, azimuth: 180 }, turbidity: 10, rayleigh: 0.8, cloudCoverage: 0.1,
+    fog: 0xe0cfb2, fogDensity: 0.000032, exposure: 0.48,
+    water: 0x3a6a70, terrain: { kind: 'desert', scale: 1, height: 520, baseHeight: 40 },
+    palette: { beach: 0xd9b27c, low: 0xd2a56a, mid: 0xc08a52, high: 0xa86f45, peak: 0x8e5c3c },
+    trees: { type: 'rock', density: 0.4 }, clouds: 20,
+  },
+  arctic: {
+    name: 'Arctic Circle', base: 'carrier',
+    sun: { elevation: 6, azimuth: 250 }, turbidity: 2, rayleigh: 2.6, cloudCoverage: 0.4,
+    fog: 0xd6c8c0, fogDensity: 0.00004, exposure: 0.6,
+    water: 0x123447, terrain: { kind: 'icecoast', scale: 1, height: 900 },
+    palette: { beach: 0xdfe6ea, low: 0xe8eef2, mid: 0xc9d3da, high: 0x9aa5ae, peak: 0xffffff },
+    trees: { type: 'snowpine', density: 0.6 }, clouds: 60,
+  },
+  dusk: {
+    name: 'Last Light Ridge', base: 'airbase',
+    sun: { elevation: 3, azimuth: 275 }, turbidity: 6, rayleigh: 3, cloudCoverage: 0.45,
+    fog: 0x8a6e66, fogDensity: 0.000045, exposure: 0.75,
+    water: 0x1a2a3a, terrain: { kind: 'alpine', scale: 1, height: 2200, baseHeight: 60 },
+    palette: { beach: 0x6e6450, low: 0x3e4f34, mid: 0x4c5044, high: 0x5f5a55, peak: 0xe6e6ea },
+    trees: { type: 'pine', density: 1.0 }, clouds: 80,
+  },
+};

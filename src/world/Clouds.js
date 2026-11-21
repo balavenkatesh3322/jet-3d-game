@@ -46,7 +46,7 @@ export class Clouds {
     const mat = new THREE.ShaderMaterial({
       uniforms: THREE.UniformsUtils.merge([THREE.UniformsLib.fog, {
         map: { value: null }, sunDir: { value: sunDir.clone() },
-        lit: { value: new THREE.Color(1.0, 0.98, 0.95) }, shade: { value: new THREE.Color(0.76, 0.8, 0.87) },
+        lit: { value: new THREE.Color(2.3, 2.25, 2.15) }, shade: { value: new THREE.Color(1.45, 1.55, 1.75) },
       }]),
       vertexShader: /* glsl */`
         varying vec2 vUv; varying float vH; varying float vFade; varying vec3 vWorld;

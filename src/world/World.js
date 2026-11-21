@@ -187,7 +187,7 @@ export class World {
   buildTrees() {
     const th = this.theater;
     const density = th.trees.density * (this.quality === 'low' ? 0.4 : this.quality === 'medium' ? 0.7 : 1);
-    const max = Math.floor(9000 * density);
+    const max = Math.min(24000, Math.floor(12000 * density));
     if (!max) return;
     const geo = treeGeometry(th.trees.type);
     const mat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.9, flatShading: true });
@@ -200,14 +200,14 @@ export class World {
     while (n < max && tries < max * 12) {
       tries++;
       // cluster near the base and the operational area (north)
-      const r = Math.sqrt(rnd()) * 20000, a = rnd() * Math.PI * 2;
-      const x = Math.cos(a) * r, z = Math.sin(a) * r - 3000 * rnd();
+      const r = Math.sqrt(rnd()) * 13000, a = rnd() * Math.PI * 2;
+      const x = Math.cos(a) * r, z = Math.sin(a) * r - 5000 * rnd();
       const h = t.heightAt(x, z);
       if (h < 6 || h > peak * 0.62) continue;
       if (t.slopeAt(x, z) > 0.55) continue;
       if (this.base.surfaceAt(x, z) !== null || (Math.abs(x) < 600 && Math.abs(z) < 2200 && this.base.type === 'airbase')) continue;
       // forests are patchy
-      if (t.noise.noise(x * 0.0008, z * 0.0008) < (th.trees.type === 'jungle' ? -0.5 : -0.05)) continue;
+      if (t.noise.noise(x * 0.0008, z * 0.0008) < (th.trees.type === 'jungle' ? -0.75 : -0.1)) continue;
       const sc = 0.7 + rnd() * 0.8;
       p.set(x, h - 0.5, z);
       q.setFromAxisAngle(new THREE.Vector3(0, 1, 0), rnd() * 6.28);

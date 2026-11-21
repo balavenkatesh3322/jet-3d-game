@@ -22,8 +22,8 @@ export const THEATERS = {
     sun: { elevation: 35, azimuth: 200 }, turbidity: 8, rayleigh: 2.2, cloudCoverage: 0.6,
     fog: 0xaebfa8, fogDensity: 0.00006, exposure: 0.5,
     water: 0x2c4a32, terrain: { kind: 'hills', scale: 1, height: 700, baseHeight: 30 },
-    palette: { beach: 0x7c6a45, low: 0x2f5a1f, mid: 0x244b18, high: 0x3a5a28, peak: 0x5e6b4a },
-    trees: { type: 'jungle', density: 2.2 }, clouds: 110,
+    palette: { beach: 0x7c6a45, low: 0x3d6b22, mid: 0x1f4214, high: 0x4a6a2c, peak: 0x6b6f55 },
+    trees: { type: 'jungle', density: 2.6 }, clouds: 110,
   },
   mountains: {
     name: 'Thunder Mountains', base: 'airbase',

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jet-3d-game.netlify.app/sitemap.xml

@@ -41,6 +41,7 @@ const VERT = /* glsl */`
 `;
 const FRAG = /* glsl */`
   uniform sampler2D map;
+  uniform float boost;
   varying vec4 vColor;
   varying float vRot;
   #include <fog_pars_fragment>
@@ -49,7 +50,7 @@ const FRAG = /* glsl */`
     float c = cos(vRot), s = sin(vRot);
     uv = vec2(c * uv.x - s * uv.y, s * uv.x + c * uv.y) + 0.5;
     vec4 tex = texture2D(map, uv);
-    gl_FragColor = vec4(vColor.rgb * tex.rgb, vColor.a * tex.a);
+    gl_FragColor = vec4(vColor.rgb * tex.rgb * boost, vColor.a * tex.a);
     if (gl_FragColor.a < 0.004) discard;
     #include <fog_fragment>
   }
@@ -82,7 +83,7 @@ class ParticleSystem {
     this.geo.setAttribute('rot', this.aRot);
     this.geo.boundingSphere = new THREE.Sphere(new THREE.Vector3(), 1e7);
     this.mat = new THREE.ShaderMaterial({
-      uniforms: THREE.UniformsUtils.merge([THREE.UniformsLib.fog, { map: { value: texture }, scale: { value: 600 } }]),
+      uniforms: THREE.UniformsUtils.merge([THREE.UniformsLib.fog, { map: { value: texture }, scale: { value: 600 }, boost: { value: additive ? 2.6 : 1.7 } }]),
       vertexShader: VERT, fragmentShader: FRAG,
       transparent: true, depthWrite: false, fog: true,
       blending: additive ? THREE.AdditiveBlending : THREE.NormalBlending,

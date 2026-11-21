@@ -88,7 +88,7 @@ export class Game {
     const q = this.save.settings.quality;
     this.renderer.setPixelRatio(this.pixelRatio());
     this.renderer.shadowMap.enabled = q !== 'low';
-    this.bloom.enabled = q !== 'low';
+    this.bloom.enabled = false; // HDR sky makes bloom wash out the frame
     this.onResize();
   }
 

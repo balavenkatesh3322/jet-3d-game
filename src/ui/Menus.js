@@ -66,7 +66,7 @@ export class Menus {
         <button class="btn" data-act="nav" data-to="controls">CONTROLS</button>
       </div>
       <div class="jetcard"><div class="k">SELECTED AIRCRAFT</div><div class="n">${jet.name}</div><div class="r">${jet.role}</div></div>
-      <div class="foot">Click anywhere to enable sound • Gamepad supported • Built with three.js</div>`);
+      <div class="foot">Click anywhere to enable sound • Gamepad supported • Created by <a href="https://balavenkatesh.is-a.dev/" target="_blank" rel="noopener" style="color:#22d3ee">Bala Venkatesh</a></div>`);
   }
 
   render_loading() {

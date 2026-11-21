@@ -94,8 +94,8 @@ class Missile {
       for (let i = 0; i < n; i++) {
         const back = this.speed * dt * (i / n);
         p.smoke.spawn({ x: this.pos.x - this.dir.x * (3 + back), y: this.pos.y - this.dir.y * (3 + back), z: this.pos.z - this.dir.z * (3 + back),
-          vx: rand(-1, 1), vy: rand(-0.5, 1.5), vz: rand(-1, 1), life: boosting ? 4.5 : 2, size0: 2.5, size1: 14,
-          color0: [0.92, 0.92, 0.92, 0.55], color1: [0.85, 0.85, 0.85, 0], drag: 0.4 });
+          vx: rand(-1, 1), vy: rand(-0.5, 1.5), vz: rand(-1, 1), life: boosting ? 5 : 2.5, size0: 3.5, size1: 20,
+          color0: [0.92, 0.92, 0.92, 0.7], color1: [0.85, 0.85, 0.85, 0], drag: 0.4 });
       }
       if (boosting) p.fire.spawn({ x: this.pos.x - this.dir.x * 2.5, y: this.pos.y - this.dir.y * 2.5, z: this.pos.z - this.dir.z * 2.5, life: 0.12, size0: 5, size1: 1, color0: [1, 0.8, 0.5, 1], color1: [1, 0.4, 0.1, 0] });
     }

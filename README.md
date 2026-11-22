@@ -18,9 +18,17 @@ Eight campaign stages across ocean, coast, jungle, mountains, desert and arctic,
 
 ---
 
-## 🎬 Gameplay clip
+## 🎬 Gameplay
 
-▶️ **[Watch the gameplay video (21s, MP4)](docs/skyforge-strike-gameplay.mp4)**: catapult launch, missile dogfight, mountain canyon run and a desert AGM strike.
+<div align="center">
+
+[![Skyforge Strike II gameplay](docs/gameplay.gif)](docs/skyforge-strike-gameplay.mp4)
+
+▶️ **[Watch the full-quality video with sound (MP4)](docs/skyforge-strike-gameplay.mp4)**
+
+*Catapult launch · missile dogfight · mountain canyon run · desert AGM strike*
+
+</div>
 
 ## 📸 Screenshots
 

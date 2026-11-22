@@ -18,6 +18,10 @@ Eight campaign stages across ocean, coast, jungle, mountains, desert and arctic,
 
 ---
 
+## 🎬 Gameplay clip
+
+▶️ **[Watch the gameplay video (21s, MP4)](docs/skyforge-strike-gameplay.mp4)**: catapult launch, missile dogfight, mountain canyon run and a desert AGM strike.
+
 ## 📸 Screenshots
 
 | Catapult launch | Carrier landing (ICLS + LSO) |
